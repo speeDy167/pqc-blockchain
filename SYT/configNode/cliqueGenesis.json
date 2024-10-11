@@ -1,0 +1,38 @@
+{
+  "config": {
+    "chainId": 1338,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "zeroBaseFee": true,
+    "contractSizeLimit": 2147483647,
+    "clique": {
+      "blockperiodseconds": 15,
+      "epochlength": 30000,
+      "createemptyblocks": false
+    }
+  },
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "difficulty": "0x1",
+  "gasLimit": "0x1fffffffffffff",
+  "extraData": "0x00000000000000000000000000000000000000000000000000000000000000007747a308a3a59ccdd37b2bb3d7be6b0471f261e1b176eb00f933f20acb4cc78e6200639d01dd4686d2d8dfbb8d90efa1944f27cd4a9088ca6bb349efff9a1903307ba17586d76b7a0712985ebcd0f0800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "nonce": "0x0",
+  "timestamp": "0x5c51a607",
+  "alloc": {
+    "627306090abaB3A6e1400e9345bC60c78a8BEf57": {
+      "privateKey": "c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3",
+      "comment": "private key and this comment are ignored.  In a real chain, the private key should NOT be stored",
+      "balance": "0xad78ebc5ac6200000"
+    }
+  },
+    "blockchain": {
+    "nodes": {
+      "generate": true,
+      "count": 4
+    }
+  },
+
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}

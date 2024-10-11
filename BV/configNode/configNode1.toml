@@ -1,0 +1,94 @@
+data-path="/home/speedy/test-net/Node1/data"
+# This is the datapath where the blockchain data will be stored
+network-id=1337
+genesis-file="/home/speedy/test-net/Node1/config/cliqueGenesis.json"
+# Network
+bootnodes=[
+    "enode://98da98c075c2aca91704a9ef683f597ad52b96970a2b9fd9bf832f03aad461101f1fc85f03743ab522fe3c179bea453b806d164996379be004d994a2b70dd938@192.168.169.133:30303",
+]
+# allows for the bootnodes to discover each other as they start up. In
+# this example, there are three bootnodes stipulated for this network
+
+#P2P
+p2p-host="192.168.169.133"
+p2p-interface="0.0.0.0"
+p2p-port=30303 #P2P port for Node1
+#TLS-P2P
+#Xp2p-tls-enabled=true
+#Xp2p-tls-keystore-type="JKS"
+#Xp2p-tls-keystore-file="/home/node2/besu/cert/node2-keystore.jks"
+#Xp2p-tls-keystore-password-file="/home/node2/besu/cert/password.txt"
+#Xp2p-tls-crl-file="/home/kyo/besu/cert/Node2/crl.pem"
+#Xp2p-tls-truststore-type="JKS"
+#Xp2p-tls-truststore-file="/home/node2/besu/cert/node2-truststore.jks"
+#Xp2p-tls-truststore-password-file="/home/node2/besu/cert/password.txt"
+
+
+discovery-enabled=true
+remote-connections-limit-enabled=true
+remote-connections-max-percentage=60
+random-peer-priority-enabled=false
+host-allowlist=["*"]
+engine-host-allowlist=["*"]
+engine-rpc-enabled=true
+#engine-jwt-disabled=true
+#max-peers=42
+# SYNC
+sync-mode="FULL" # For archive nodes
+#sync-mode="SNAP" # For light nodes
+#fast-sync-min-peers=3
+
+# Database
+data-storage-format="FOREST"
+
+max-peers=42
+# The maximum number of peer to peer connections this network can
+
+# JSON-RPC
+rpc-http-host="192.168.169.133"
+rpc-http-port=8545 # HTTP RPC port for Node1
+rpc-ws-host="192.168.169.133"
+rpc-ws-enabled = true
+rpc-ws-port=8546 # WebSocket port for Node1
+rpc-http-api=["ETH", "NET", "WEB3", "ADMIN", "CLIQUE", "TXPOOL"]
+rpc-http-enabled=true
+rpc-http-cors-origins=["*"]
+rpc-tx-feecap=0
+engine-rpc-port = 8551	# Find peer port for Node2
+
+# GRAPHQL-RPC
+graphql-http-enabled=true
+graphql-http-host="192.168.169.133"
+graphql-http-port=10001 # Port for Node1
+graphql-http-cors-origins=["*"]
+
+# Transaction Pool
+tx-pool="sequenced" 
+#tx-pool-price-bump=0
+tx-pool-blob-price-bump=100
+#strict-tx-replay-protection-enabled=true
+tx-pool-no-local-priority=false
+tx-pool-enable-save-restore=true
+tx-pool-save-file="txpool.dump"
+
+## Layered
+#tx-pool-layer-max-capacity=12500000
+#tx-pool-max-prioritized-by-type=["BLOB=10","FRONTIER=100"]
+#tx-pool-max-future-by-sender=321
+#tx-pool-max-prioritized=4096
+
+## Legacy/Sequenced
+tx-pool-retention-hours=24
+tx-pool-max-size=4096
+tx-pool-limit-by-account-percentage=0.017
+tx-pool-min-gas-price=0
+min-gas-price=0
+
+#miner-enabled=true
+# This option enables mining when the node is started. The type of
+# consensus mechanism will be stipulated in the genesis file
+
+#miner-coinbase="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
+# miner-coinbase provides the account to which mining rewards will be
+# paid for this blockchain
+

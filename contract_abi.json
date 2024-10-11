@@ -1,0 +1,80 @@
+[
+  {
+    "inputs": [],
+    "name": "lastBlockData",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "blockHash",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "parentHash",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "transactionsRoot",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_blockHash",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_parentHash",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_transactionsRoot",
+        "type": "string"
+      }
+    ],
+    "name": "storeBlockData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getBlockData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "blockHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "parentHash",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "transactionsRoot",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct BlockDataStorage.BlockData",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  }
+]
